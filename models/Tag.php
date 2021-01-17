@@ -27,6 +27,7 @@ class Tag extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'string', 'max' => 255],
+            [['name'], 'filter', 'filter' => 'strip_tags']
         ];
     }
 
